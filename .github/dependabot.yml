@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: gradle
+  directory: "/java"
+  schedule:
+    interval: daily
+    time: "20:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.junit.jupiter:junit-jupiter-engine
+    versions:
+    - "< 5.3.3, >= 5.3.2.a"
+  - dependency-name: org.junit:junit-bom
+    versions:
+    - 5.7.0
